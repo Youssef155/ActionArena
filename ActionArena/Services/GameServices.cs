@@ -1,5 +1,4 @@
-﻿
-namespace ActionArena.Services
+﻿namespace ActionArena.Services
 {
     public class GameServices : IGameServices
     {
@@ -11,7 +10,7 @@ namespace ActionArena.Services
         {
             _dbcontext = dbcontext;
             _webHostEnvironment = webHostEnvironment;
-            _coverPath = $"{_webHostEnvironment.WebRootPath}/assets/covers";
+            _coverPath = $"{_webHostEnvironment.WebRootPath}{FileSettings.ImagesPath}";
         }
 
         public async Task Create(CreateGameFormVM model)

@@ -1,5 +1,4 @@
-﻿
-namespace ActionArena.Services
+﻿namespace ActionArena.Services
 {
     public class CategoryServices : ICategoryServices
     {

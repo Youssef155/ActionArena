@@ -6,3 +6,5 @@ global using Microsoft.AspNetCore.Mvc.Rendering;
 global using ActionArena.Services;
 global using ActionArena.Models;
 global using ActionArena.ViewModels;
+global using ActionArena.Settings;
+global using ActionArena.Attributes;
