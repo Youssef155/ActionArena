@@ -24,3 +24,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.cover-preview {
+    max-height: 500px;
+    border-radius: 20px;
+}
+}
