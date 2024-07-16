@@ -4,10 +4,10 @@
     {
         private readonly IDevicesServices _devicesServices;
         private readonly ICategoryServices _categoryServices;
-        private readonly IGameServices _gameServices;
+        private readonly IGamesService _gameServices;
 
         public GamesController(ICategoryServices categoryServices, 
-                IDevicesServices devicesServices, IGameServices gameServices)
+                IDevicesServices devicesServices, IGamesService gameServices)
         {
             _categoryServices = categoryServices;
             _devicesServices = devicesServices;

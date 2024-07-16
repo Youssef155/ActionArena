@@ -1,12 +1,13 @@
-﻿namespace ActionArena.Services
+﻿
+namespace ActionArena.Services
 {
-    public class GameServices : IGameServices
+    public class GamesService : IGamesService
     {
         private readonly ActionArenaDbContext _dbcontext;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly string _coverPath;
 
-        public GameServices(ActionArenaDbContext dbcontext, IWebHostEnvironment webHostEnvironment)
+        public GamesService(ActionArenaDbContext dbcontext, IWebHostEnvironment webHostEnvironment)
         {
             _dbcontext = dbcontext;
             _webHostEnvironment = webHostEnvironment;
@@ -32,6 +33,16 @@
 
             _dbcontext.Add(game);
             _dbcontext.SaveChanges();
+        }
+
+        public IEnumerable<Game> GetAll()
+        {
+            return _dbcontext.Games
+                .Include(g => g.Category)
+                .Include(g => g.Devices)
+                .ThenInclude(d => d.Device)
+                .AsNoTracking()
+                .ToList();
         }
     }
 }

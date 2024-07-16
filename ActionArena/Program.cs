@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ICategoryServices, CategoryServices>();
 builder.Services.AddScoped<IDevicesServices, DevicesServices>();
-builder.Services.AddScoped<IGameServices, GameServices>();
+builder.Services.AddScoped<IGamesService, GamesService>();
 
 var app = builder.Build();
 

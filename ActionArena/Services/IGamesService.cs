@@ -1,7 +1,8 @@
 ﻿namespace ActionArena.Services
 {
-    public interface IGameServices
+    public interface IGamesService
     {
         Task Create(CreateGameFormVM vm);
+        IEnumerable<Game> GetAll();
     }
 }
