@@ -30,3 +30,15 @@ body {
     border-radius: 20px;
 }
 }
+
+/* Start Override SweetAlert2 */
+
+.swal2-title, .swal2-html-container {
+    color: #fff !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+    background: #131f22;
+}
+
+/* End Override SweetAlert2 */
